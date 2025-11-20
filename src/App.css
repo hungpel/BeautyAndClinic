@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+
+:root {
+    --pink-color: #FF64AE;
+    --bold-text-color: #091156;
+    --light-text-color: #D7DBFF;
+    scroll-behavior: smooth;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#top-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 50rem);
+    background: url('./assets/img/slide_bg.png') no-repeat;
+    background-size: 88%;
+    z-index: -1;
+}
+
+#about-us-section::after {
+    content: "";
+    position: absolute;
+    bottom: -34rem;
+    right: 0;
+    width: 80%;
+    height: calc(100% + 50rem);
+    background: url('./assets/img/about_bg.png') no-repeat;
+    background-size: 100%;
+    z-index: -1;
+}
+
+
+/* Contact Part */
+#contact-us-section::after {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 50rem);
+    background: url('./assets/img/contact_bg.png') no-repeat;
+    background-size: 80%;
+    z-index: -1;
+}
+
+
+/* Footer Part */
+#footer-section {
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+    margin-top: 0.5rem;
+    background-image: url('./assets/img/footer_bg.png'), url('./assets/img/bottom_bg.png');
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+}
+
+
+@media (max-width: 768px) {
+    #contact-us-section::after {
+        height: 50%;
+        top: 30rem;
+    }
+}
+
+@media (max-width: 640px) {
+    #footer-section {
+        background-size: 100%, 850%;
+    }
+}
