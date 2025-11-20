@@ -12,10 +12,8 @@ export default function Footer() {
 <section id="footer-section">
   <div id="site-footer" className="pt-16 max-lg:pt-1 text-[#D7DBFF] max-w-[71.25rem] mx-auto max-lg:">
 
-    {/* TOP */}
     <div className="footer-top flex flex-wrap justify-between gap-[2.2rem] mt-40 max-lg:mt-12 max-sm:mt-0">
 
-      {/* Sidebar 1 */}
       <div id="footer_sidebar_1" className="flex-[2] max-lg:w-full max-sm:flex-none">
         <img src={footer_logo} alt="footer_logo" className="pt-4 pb-[2.1rem] max-lg:pl-8 max-sm:py-4"/>
         <div className="footer-desc pl-8 flex flex-col gap-[0.2rem] tracking-[0.11rem]">
@@ -28,7 +26,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Sidebar 2 */}
       <div id="footer_sidebar_2" className="flex flex-col flex-1 tracking-[0.1rem] max-lg:justify-end max-sm:justify-between max-sm:pl-10 max-sm:pt-8">
         <h3 className="pb-5 pl-[3.3rem] font-semibold text-[1.125rem] text-white max-lg:pl-0 max-lg:pb-1 max-sm:text-[1rem]">Pages</h3>
         <ul className="list-none p-0 pl-[3.3rem] pt-2 flex flex-col gap-[0.7rem] max-lg:pl-0 max-lg:items-start max-sm:gap-[0.5rem] max-sm:text-base">
@@ -48,7 +45,6 @@ export default function Footer() {
         </ul>
       </div>
 
-      {/* Sidebar 3 */}
       <div id="footer_sidebar_3" className="flex flex-col flex-1 tracking-[0.1rem] max-lg:justify-end max-sm:between max-sm:pl-10 max-sm:pt-8 max-sm:justify-start">
         <h3 className="pb-5 pl-[3.3rem] font-semibold text-[1.125rem] text-white tracking-[0.12rem] max-lg:pl-0 max-sm:pb-1 max-sm:text-[1rem]">Informations</h3>
         <ul className="list-none p-0 pl-[3.3rem] pt-2 flex flex-col gap-[0.7rem] max-lg:pl-0 max-lg:items-start max-sm:gap-[0.8rem]">
@@ -69,7 +65,6 @@ export default function Footer() {
 
     </div>
 
-    {/* BOTTOM */}
     <div className="footer-bottom flex flex-row justify-between items-center flex-wrap pt-[8.8rem] pb-20 max-lg:pt-[1rem] max-lg:pb-10 max-lg:px-10 max-lg:text-center max-sm:flex-col max-sm:gap-4 max-sm:pb-4 max-sm:pt-6">
       <div id="social-media" className="flex flex-row gap-[2.8rem] max-lg:gap-[1.5rem] max-sm:gap-[3rem]">
         <img src={facebook_f} alt="face" />
@@ -81,7 +76,6 @@ export default function Footer() {
       <p className="tracking-[0.1rem] max-lg:text-[14px]">&copy; AltDesain Studio 2021 - All right reserved.</p>
     </div>
 
-    {/* Scroll Button */}
     <button id="scrollButton" className="fixed bottom-[178px] right-[155px] p-[10px] bg-[var(--pink-color)] text-white rounded-md cursor-pointer text-[16px] z-[1000] max-lg:right-8 max-lg:bottom-24 max-sm:bottom-14 max-sm:right-6">
       <img src={arrow_up} alt="arrow-up" />
     </button>

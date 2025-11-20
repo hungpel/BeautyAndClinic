@@ -5,7 +5,7 @@ import burger_bar from '../assets/icon/burger-bar.png'
 import close_menu from '../assets/icon/close_menu.png'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu toggle
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,8 +24,9 @@ export default function Header() {
         </div>
         
 
+
         <nav id="right-header" className={`flex gap-[50px] text-[16px] font-[500] justify-between max-lg:gap-4
-          max-md:flex-row max-md:w-full max-md:pl-4 max-sm:flex-col max-sm:gap-5 max-sm:items-center max-sm:pl-0 max-sm:${isMenuOpen ? 'block' : 'hidden'}`}>
+          max-md:flex-row max-md:w-full max-md:pl-4 max-sm:flex-col max-sm:gap-5 max-sm:items-center max-sm:pl-0 ${isMenuOpen ? 'block' : 'hidden'}`}>
           <ul id="navbar" className='flex justify-between items-center gap-[46px] list-none 
             max-lg:gap-[25px] max-lg:text-[15px] max-md:flex-row max-md:gap-6'>
             <li className='text-[var(--bold-text-color)] font-[600] flex gap-[5px] max-md:text-[14px] max-sm:text-[15px]'>
