@@ -9,12 +9,12 @@ import TitleAndDesc from './TitleAndDesc'
 
 function Professional() {
   return (
-<section id="professional-team" className="text-center text-[#8B8B8B] py-20 max-w-[71.25rem] mx-auto max-lg:py-16 max-sm:pt-12 max-sm:pb-0">
-  <div id="professional-team-info" className="flex flex-col gap-[0.7rem] items-center pt-[0.5rem] mb-12 max-sm:mb-8">
+<section id="professional-team" className="text-center text-[#8B8B8B] py-19 max-w-[71.25rem] mx-auto max-lg:py-16 max-sm:pt-12 max-sm:pb-0">
+  <div id="professional-team-info" className="flex flex-col items-center pt-[0.5rem] mb-12 max-sm:mb-8">
     <TitleAndDesc p1="Professional Teams" h1="The Professional expert" p2="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."/>
   </div>
 
-  <div id="professional-team-detail" className="flex flex-row justify-around flex-wrap pt-[4.6rem] h-[39.125rem] max-lg:h-auto max-lg:gap-0 max-lg:pt-10 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:pt-0">
+  <div id="professional-team-detail" className="flex flex-row justify-around flex-wrap pt-[4rem] h-[39.125rem] max-lg:h-auto max-lg:gap-0 max-lg:pt-10 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:pt-0">
     <div className="professional-card flex flex-col items-center gap-[0.7rem] w-[16.875rem] h-[38rem] pt-8 max-lg:rounded-[2.625rem] max-lg:shadow-[0_25px_50px_rgba(228,231,255,0.5)] max-lg:w-[20rem] max-lg:h-auto max-lg:pt-6 max-sm:w-full max-sm:max-w-[24rem]">
       <img className="pt-10 pb-10 max-lg:w-[10rem] max-sm:w-[9rem] max-sy-2b-2" src={professional_card_img_1} alt="" />
       <p className="font-semibold text-[var(--pink-color)]">Surgeon</p>

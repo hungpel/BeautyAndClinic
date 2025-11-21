@@ -37,7 +37,7 @@ body {
     bottom: -34rem;
     right: -2rem;
     width: 80%;
-    height: calc(100% + 50rem);
+    height: calc(100% + 30rem);
     background: url('./assets/img/backgrounds/about-bg.png') no-repeat;
     background-size: 100%;
     z-index: -1;
@@ -51,7 +51,7 @@ body {
     top: -4rem;
     left: -2rem;
     width: 100%;
-    height: calc(100% + 50rem);
+    height: calc(100% + 30rem);
     background: url('./assets/img/backgrounds/contact-bg.png') no-repeat;
     background-size: 80%;
     z-index: -1;
@@ -59,7 +59,7 @@ body {
 
 
 /* Footer Part */
-#footer-section {
+/* #footer-section {
     max-width: 1440px;
     margin: auto;
     position: relative;
@@ -68,6 +68,30 @@ body {
     background-size: 100%, 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: top, bottom;
+} */
+#footer-section {
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+    z-index: 1;
+    margin-top: 0.5rem;
+
+}
+
+#footer-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-image: url('./assets/img/backgrounds/footer-bg.png'), 
+                      url('./assets/img/backgrounds/bottom-bg.png');
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    z-index: -1;
 }
 
 @media (max-width: 1440px) {

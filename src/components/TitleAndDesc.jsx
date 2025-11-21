@@ -5,7 +5,7 @@ function TitleAndDesc({ p1, h1, p2 }) {
         {p1}
       </p>
 
-      <h1 className="text-[2.25rem] max-w-[29rem] text-[var(--bold-text-color)] font-semibold leading-[125%] tracking-[0.01rem] pt-[10px] mx-auto max-lg:text-[1.8rem] max-lg:max-w-[24rem] max-sm:text-[1.5rem] max-sm:max-w-[20rem]">
+      <h1 className="text-[2.25rem] max-w-[29rem] text-[var(--bold-text-color)] font-semibold leading-[125%] tracking-[0.02rem] pt-[10px] mx-auto max-lg:text-[1.8rem] max-lg:max-w-[24rem] max-sm:text-[1.5rem] max-sm:max-w-[20rem]">
         {h1}
       </h1>
 

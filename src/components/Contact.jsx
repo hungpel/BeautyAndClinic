@@ -3,8 +3,8 @@ import TitleAndDesc from "./TitleAndDesc";
 
 export default function Contact() {
   return (
-  <section id="contact-us-section" className="relative max-w-[1440px] max-sm:max-w-[480px] mx-auto">
-    <div id="contact-us" className="flex justify-between items-center text-[#8B8B8B] py-[7rem] pb-8 max-w-[71.25rem] mx-auto max-lg:flex-col max-lg:text-center max-lg:py-12">
+  <section id="contact-us-section" className="relative max-w-[1440px] mx-auto">
+    <div id="contact-us" className="flex justify-between items-center text-[#8B8B8B] py-[6.6rem] pb-8 max-w-[71.25rem] mx-auto max-lg:flex-col max-lg:text-center max-lg:py-12">
       
       <img 
         src={contact_us_img}

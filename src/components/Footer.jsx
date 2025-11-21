@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
         {
           showScrollBtn && 
-              <button id="scrollButton" onClick={scrollToTop} className="fixed bottom-[178px] right-[155px] p-[10px] bg-[var(--pink-color)] text-white rounded-md cursor-pointer text-[16px] z-[1000] max-lg:right-8 max-lg:bottom-24 max-sm:bottom-14 max-sm:right-6">
+              <button id="scrollButton" onClick={scrollToTop} className="fixed bottom-[168px] right-[64px] p-[10px] bg-[var(--pink-color)] text-white rounded-md cursor-pointer text-[16px] z-[1000] max-lg:right-8 max-lg:bottom-24 max-sm:bottom-14 max-sm:right-6">
           <img src={arrow_up} alt="arrow-up" />
         </button>
         }
