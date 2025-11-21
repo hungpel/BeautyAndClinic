@@ -1,4 +1,4 @@
-import slide_img from '../assets/img/slide_img.png';
+import slide_img from '../../../assets/img/slide-img.png';
 
 function HomeSlide() {
     return (

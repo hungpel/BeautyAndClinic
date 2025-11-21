@@ -1,7 +1,7 @@
-import service_card_img_1 from '../assets/img/service_card_img_1.png';
-import service_card_img_2 from '../assets/img/service_card_img_2.png';
-import service_card_img_3 from '../assets/img/service_card_img_3.png';
-import TitleAndDesc from './TitleAndDesc';
+import service_card_img_1 from '../../../assets/img/service/service-card-img-1.png';
+import service_card_img_2 from '../../../assets/img/service/service-card-img-2.png';
+import service_card_img_3 from '../../../assets/img/service/service-card-img-3.png';
+import TitleAndDesc from '../../../components/TitleAndDesc';
 
 function CoreService() {
   return (

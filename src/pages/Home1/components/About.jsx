@@ -1,6 +1,6 @@
 import React from 'react';
-import play_btn from "../assets/icon/Play_button.svg";
-import about_img from "../assets/img/about_img.png";
+import play_btn from "../../../assets/icon/play-button.svg";
+import about_img from "../../../assets/img/about-img.png";
 
 function About() {
   return (

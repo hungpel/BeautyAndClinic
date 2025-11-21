@@ -1,4 +1,4 @@
-import contact_us_img from "../assets/img/contact_us_img.png";
+import contact_us_img from "../assets/img/contact-us-img.png";
 import TitleAndDesc from "./TitleAndDesc";
 
 export default function Contact() {
