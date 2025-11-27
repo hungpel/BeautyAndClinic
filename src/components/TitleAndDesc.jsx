@@ -1,6 +1,6 @@
-function TitleAndDesc({ p1, h1, p2 }) {
+function TitleAndDesc({ className, p1, h1, p2 }) {
   return (
-    <>
+    <div className={className}>
       <p className="text-[var(--pink-color)] font-semibold text-base leading-[125%] pt-[5px]">
         {p1}
       </p>
@@ -12,8 +12,10 @@ function TitleAndDesc({ p1, h1, p2 }) {
       <p className="font-normal max-w-[848px] py-[1.3rem] tracking-[0.1rem] whitespace-pre-line mx-auto max-lg:max-w-[650px] max-lg:text-[0.9rem] max-lg:py-4 max-sm:max-w-[90%] max-sm:text-[0.9rem] max-sm:py-3">
         {p2}
       </p>
-    </>
+    </div>
   )
 }
+
+
 
 export default TitleAndDesc;

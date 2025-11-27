@@ -4,7 +4,7 @@ import about_img from "../../../assets/img/about-img.png";
 
 function About() {
   return (
-    <section id="about-us-section" className="max-w-[1440px] mx-auto relative max-lg:px-6 max-sm:px-4">
+    <section id="about-us-section" className="relative max-lg:px-6 max-sm:px-4">
       <div id="about-us" className="relative flex flex-row justify-between items-end gap-5 text-[#8B8B8B] py-[3.6rem] max-w-[71.25rem] mx-auto max-lg:flex-col max-lg:items-center max-lg:gap-10 max-sm:py-10">
         
         <div id="about-content" className="max-lg:text-center max-lg:flex max-lg:flex-col max-lg:items-center">

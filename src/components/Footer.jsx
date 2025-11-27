@@ -1,4 +1,4 @@
-import footer_logo from "../assets/logo/footer-logo.png";
+import light_logo from "../assets/logo/light-logo.png";
 import right_icon from "../assets/icon/caret-right.svg";
 import facebook_f from "../assets/icon/facebook-f.svg";
 import twitter from "../assets/icon/twitter.svg";
@@ -40,7 +40,7 @@ export default function Footer() {
       <div id="site-footer" className="pt-16 max-lg:pt-1 text-[#D7DBFF] max-w-[71.25rem] mx-auto max-lg:">
         <div className="footer-top flex flex-wrap justify-between gap-[2.2rem] mt-40 max-lg:mt-12 max-sm:mt-0">
           <div id="footer_sidebar_1" className="flex-[2] max-lg:w-full max-sm:flex-none">
-            <img src={footer_logo} alt="footer_logo" className="pt-4 pb-[2.1rem] max-lg:pl-8 max-sm:py-4"/>
+            <img src={light_logo} alt="light_logo" className="pt-4 pb-[2.1rem] max-lg:pl-8 max-sm:py-4"/>
             <div className="footer-desc pl-8 flex flex-col gap-[0.2rem] tracking-[0.11rem]">
               <p className="pb-5"><b>Beautice</b> is a Beauty Clinic WordPress Theme.</p>
               <p className="italic font-medium text-[14px]">Baker Steet 101, NY, United States.</p>
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
         {
           showScrollBtn && 
-              <button id="scrollButton" onClick={scrollToTop} className="fixed bottom-[168px] right-[64px] p-[10px] bg-[var(--pink-color)] text-white rounded-md cursor-pointer text-[16px] z-[1000] max-lg:right-8 max-lg:bottom-24 max-sm:bottom-14 max-sm:right-6">
+              <button id="scrollButton" onClick={scrollToTop} className="fixed bottom-[168px] right-[161px] p-[10px] bg-[var(--pink-color)] text-white rounded-md cursor-pointer text-[16px] z-[1000] max-lg:right-8 max-lg:bottom-24 max-sm:bottom-14 max-sm:right-6">
           <img src={arrow_up} alt="arrow-up" />
         </button>
         }
