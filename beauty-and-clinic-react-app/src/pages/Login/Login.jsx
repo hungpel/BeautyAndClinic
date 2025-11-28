@@ -64,7 +64,7 @@ function Login() {
                             We are the best beauty clinic
                         </h1>
                         <p className="text-[15px] text-[#8B8B8B] mt-6 leading-relaxed">
-                            Lorem ipsum dolor sit amet...
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius tellus in suspendisse placerat.
                         </p>
                         <p className="text-[15px] italic mt-6 lg:mt-12 text-slate-600">
                             Don't have an account?
