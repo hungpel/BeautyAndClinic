@@ -48,23 +48,24 @@ Deploy:
 ##### 🚀 Installation
 1. Clone project
 ```
-git clone https://github.com/yourname/beautice-clinic.git
-cd beautice-clinic
-
-3. Frontend setup
-cd frontend
+git clone [https://github.com/yourname/beautice-clinic.git](https://github.com/hungpel/BeautyAndClinic)
+cd BeautyAndClinic
+```
+2. Frontend setup
+```
+cd beauty-and-clinic-react-app
 npm install
 npm start
+```
 
-4. Backend setup (nếu có)
-cd backend
+3. Backend setup
+```
+cd beauty-and-clinic-be
 npm install
 npm run dev
+```
 
 🔐 Environment Variables
-Frontend .env
-VITE_API_URL=http://localhost:5000/api
-
 Backend .env
 PORT=5000
 MONGO_URI=
