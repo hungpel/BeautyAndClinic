@@ -11,11 +11,6 @@ Beautice Clinic là một website tư vấn làm đẹp và chăm sóc da, kết
 - Installation
 - Environment Variables
 - Folder Structure
-- Usage
-- API Endpoints
-- Deployment
-- Contributing
-- License
 
 # ✨ Features
 - 🎨 Landing page giới thiệu dịch vụ làm đẹp
@@ -46,19 +41,19 @@ Database:
 # 🖼 Screenshots
 
 # 🚀 Installation
-1. Clone project
+### 1. Clone project
 ```
-git clone [https://github.com/yourname/beautice-clinic.git](https://github.com/hungpel/BeautyAndClinic)
+git clone https://github.com/yourname/beautice-clinic.git
 cd BeautyAndClinic
 ```
-2. Frontend setup
+### 2. Frontend setup
 ```
 cd beauty-and-clinic-react-app
 npm install
 npm start
 ```
 
-3. Backend setup
+### 3. Backend setup
 ```
 cd beauty-and-clinic-be
 npm install
@@ -88,9 +83,14 @@ JWT_SECRET=
 │   │   └── App.jsx
 │   └── ...
 ├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   └── server.js
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── routes/
+│   │   ├── utils/
+│   │   ├── server.js
+│   ├── .env
+│   └── ...
 └── README.md
 ```
