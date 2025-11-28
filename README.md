@@ -31,7 +31,7 @@ Beautice Clinic là một website tư vấn làm đẹp và chăm sóc da, kết
 - Node.js / Express
 - REST API
 - JWT Authentication
-- 
+
 ### Database:
 - MySQL
 
