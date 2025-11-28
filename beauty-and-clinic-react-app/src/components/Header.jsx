@@ -7,7 +7,7 @@ import light_plus_icon from '../assets/icon/light-plus-icon.svg';
 import burger_bar from '../assets/icon/burger-bar.png'
 import light_burger_bar from '../assets/icon/light-burger-bar.png'
 import close_menu from '../assets/icon/close-menu.png'
-import default_avatar from '../assets/img/default-avatart.png'
+import default_avatar from '../assets/img/default-avatar.png'
 
 
 export default function Header({bgImage, lightHeader}) {
@@ -55,7 +55,7 @@ export default function Header({bgImage, lightHeader}) {
                 to="/login"
                 className={`max-sm:block sm:hidden ${lightHeader ? 
                 'border-white text-white hover:bg-white hover:text-blue-900' : 
-                'border-white-800 text-blue-900 hover:bg-blue-900 hover:text-white'} 
+                'border-pink-400 text-pink-500 hover:bg-pink-400 hover:text-white'} 
                 border-3 px-4 py-2 rounded-lg transition-colors font-bold text-center`}
               >
                 LOGIN
@@ -131,7 +131,7 @@ export default function Header({bgImage, lightHeader}) {
                 to="/login"
                 className={`${lightHeader ? 
                 'border-white text-white hover:bg-white hover:text-blue-900' : 
-                'border-white-800 text-blue-900 hover:bg-blue-900 hover:text-white'} 
+                'border-pink-400 text-pink-500 hover:bg-pink-400 hover:text-white'} 
                 border-3 px-4 py-2 rounded-full transition-colors font-bold
                 max-lg:px-2 max-lg:py-1 max-lg:text-[13px] 
                 max-sm:text-[15px] 
