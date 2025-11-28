@@ -6,9 +6,10 @@ function Home2About() {
   return (
     <section id='home2-about' className='flex flex-row justify-between items-center pt-120 text-[#8B8B8B] max-w-[70.5rem] mx-auto 
     max-[1441px]:pt-80  
-    max-xl:pt-65
-    max-lg:flex-col max-lg:gap-10 max-lg:pt-40
-    max-sm:py-15 max-sm:gap-2'>
+    max-xl:pt-60
+    max-lg:flex-col max-lg:gap-10 max-lg:pt-65
+    max-md:pt-40
+    max-sm:py-25 max-sm:gap-2'>
         <div id="home2-about-img" className="w-[42%] max-lg:flex max-lg:justify-center">
             <img src={home2_about} alt="about-vision" className="w-[100%] max-lg:w-[100%] max-sm:w-[90%]" />
         </div>

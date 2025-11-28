@@ -10,6 +10,8 @@ import Home2 from './pages/Home2/Home2';
 import AboutPage from './pages/About/AboutPage';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import Profile from './pages/Profile/Profile';
+import ProtectedRoute from './components/ProtectedRoute';
 // import Service from './pages/Service';
 // import Gallery from './pages/Gallery';
 // import Team from './pages/Team';
@@ -25,6 +27,12 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" 
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>} 
+        />
         {/* <Route path="/service" element={<Service />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/team" element={<Team />} />

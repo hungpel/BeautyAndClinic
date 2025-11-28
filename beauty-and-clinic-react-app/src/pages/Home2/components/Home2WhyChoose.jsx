@@ -11,7 +11,7 @@ function Home2WhyChoose() {
   return (
     <section id='home2-why-choose' className='relative'>
         <div className='max-w-[1440px] mx-auto  flex pt-70 pb-50 px-30 justify-between items-start text-white
-        max-[1440px]:pt-40 max-[1440px]:gap-5
+        max-[1440px]:pt-50 max-[1440px]:gap-5
         max-[1024px]:pt-30 max-[1024px]:px-10
         max-[769px]:pt-50
         max-md:flex-col max-md:pt-30 max-md:items-center
