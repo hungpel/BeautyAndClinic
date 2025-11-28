@@ -44,7 +44,7 @@ Beautice Clinic là một website tư vấn làm đẹp và chăm sóc da, kết
 # 🚀 Installation
 ### 1. Clone project
 ```
-git clone https://github.com/yourname/beautice-clinic.git
+git clone https://github.com/hungpel/BeautyAndClinic.git
 cd BeautyAndClinic
 ```
 ### 2. Frontend setup
