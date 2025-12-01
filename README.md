@@ -36,8 +36,9 @@ Beautice Clinic là một website tư vấn làm đẹp và chăm sóc da, kết
 - MySQL
 
 ### Deploy:
-- Frontend: **<UPDATE_NEEDED>**
-- Backend: **<UPDATE_NEEDED>**
+- Frontend: Vercel
+- Backend: Render
+- Database: Railway
 
 # 🖼 Screenshots
 
