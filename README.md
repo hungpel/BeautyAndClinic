@@ -3,7 +3,7 @@
 Beautice Clinic là một website tư vấn làm đẹp và chăm sóc da, kết nối người dùng với chuyên gia và cộng đồng thảo luận. Dự án bao gồm giao diện website hiện đại, tối ưu UX/UI và các tính năng chia sẻ kiến thức, booking, và tương tác cộng đồng.
 
 # 📸 Demo
-<img width="1563" height="832" alt="image" src="https://github.com/user-attachments/assets/fd9d27cc-864a-4666-8eee-08212c8fc1f8" />
+<img width="1680" height="853" alt="image" src="https://github.com/user-attachments/assets/3b09539b-3dad-4905-aa25-c113bd131b72" />
 
 
 # 📌 Table of Contents
