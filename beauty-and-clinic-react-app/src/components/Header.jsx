@@ -9,6 +9,7 @@ import light_burger_bar from '../assets/icon/light-burger-bar.png'
 import close_menu from '../assets/icon/close-menu.png'
 import default_avatar from '../assets/img/default-avatar.png'
 
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Header({bgImage, lightHeader}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Header({bgImage, lightHeader}) {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      fetch("http://localhost:3001/api/auth/profile", {
+      fetch(`${API_URL}/api/auth/profile`, {
         headers: {
           Authorization: "Bearer " + token,
         },
