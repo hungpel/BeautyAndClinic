@@ -7,7 +7,7 @@ const PORT = process.env.PORT;
 const app = express();
 
 app.use(cors({
-  origin: "https://beauty-and-clinic-opal.vercel.app"
+  origin: ["http://localhost:5173", "https://beauty-and-clinic-opal.vercel.app"],
 }));
 
 app.use(express.json());

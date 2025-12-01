@@ -20,6 +20,8 @@ const schema = yup.object({
 const API_URL = import.meta.env.VITE_API_URL;
 
 function Login() {
+    console.log("API_URL:", API_URL );
+
     const navigate = useNavigate();
 
     const {
