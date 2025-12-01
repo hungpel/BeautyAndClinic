@@ -11,6 +11,7 @@ import password_icon from '../../assets/icon/password.png'
 import { Link, useNavigate } from 'react-router-dom'
 
 
+const API_URL = import.meta.env.VITE_API_URL;
 
 const schema = yup.object().shape({
     name: yup.string().trim().required("Please enter your name"),
@@ -45,7 +46,7 @@ function Register() {
 
     const onSubmit = async (data) => {
         try {
-            const res = await fetch('http://localhost:3001/api/auth/register', {
+            const res = await fetch(`${API_URL}/api/auth/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

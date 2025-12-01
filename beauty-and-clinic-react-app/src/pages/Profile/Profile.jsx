@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Profile() {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/auth/profile", {
+        fetch(`${API_URL}/api/auth/profile`, {
         method: "GET",
         headers: {
             Authorization: "Bearer " + localStorage.getItem("token")
