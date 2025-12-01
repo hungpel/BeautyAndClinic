@@ -104,16 +104,16 @@ export default function Header({bgImage, lightHeader}) {
             max-lg:gap-[12px] max-lg:text-[15px] max-md:flex-row max-md:gap-4 
             max-sm:flex-col max-sm:w-full max-sm:gap-1 max-sm:px-2 max-sm:pt-8">
             
-            <li className={`max-lg:text-[13px] max-lg:pr-[8px] max-md:text-[14px] max-sm:text-[15px] font-semibold flex gap-[5px]  
+            <Link to='/' className={`max-lg:text-[13px] max-lg:pr-[8px] max-md:text-[14px] max-sm:text-[15px] font-semibold flex gap-[5px]  
               max-sm:justify-center max-sm:bg-[var(--pink-color)] max-sm:mx-2
               max-sm:border max-sm:border-pink-200 max-sm:mx-2 max-sm:rounded-2xl max-sm:py-4 max-sm:w-full
               ${lightHeader ? 'text-white' : 'text-[var(--bold-text-color)]'}`}>
               Home <img src={lightHeader ? light_plus_icon : plus_icon} className="pt-1" />
-            </li>
+            </Link>
             
-            <li className="max-lg:text-[13px] max-sm:text-[15px] max-sm:border max-sm:border-pink-200 max-sm:mx-2 max-sm:rounded-2xl max-sm:py-4 max-sm:text-center max-sm:w-full">
+            <Link to='/about' className="max-lg:text-[13px] max-sm:text-[15px] max-sm:border max-sm:border-pink-200 max-sm:mx-2 max-sm:rounded-2xl max-sm:py-4 max-sm:text-center max-sm:w-full">
               About
-            </li>
+            </Link>
 
             <li className="max-lg:text-[13px] max-sm:text-[15px] max-sm:border max-sm:border-pink-200 max-sm:mx-2 max-sm:rounded-2xl max-sm:py-4 max-sm:text-center max-sm:w-full">
               Service

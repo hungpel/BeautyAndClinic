@@ -1,3 +1,5 @@
+import.meta.env.VITE_API_URL;
+
 import React from "react";
 import dark_logo from "../../assets/logo/dark-logo.png";
 import google_icon from "../../assets/icon/google.png";
@@ -15,6 +17,7 @@ const schema = yup.object({
     password: yup.string().required("Password is required")
 });
 
+
 function Login() {
     const navigate = useNavigate();
 
@@ -26,6 +29,7 @@ function Login() {
         resolver: yupResolver(schema)
     });
 
+    
     const onSubmit = async (data) => {
         try {
             const res = await fetch("http://localhost:3001/api/auth/login", {
