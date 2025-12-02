@@ -14,14 +14,23 @@ import { Link, useNavigate } from 'react-router-dom'
 const API_URL = import.meta.env.VITE_API_URL;
 
 const schema = yup.object().shape({
-    name: yup.string().trim().required("Please enter your name"),
+    name: yup
+        .string()
+        .trim()
+        .required("Please enter your name")
+        .min(2, "Name must be at least 2 characters"),
     email: yup
         .string()
+        .trim()
         .email("Wrong email")
         .required("Please enter your email"),
     password: yup
         .string()
         .required("Please enter your password")
+        // .matches(
+        //     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,
+        //     "Password must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number"
+        // )
         .min(6, "Password must be at least 6 characters"),
     confirmPassword: yup
         .string()
@@ -31,6 +40,7 @@ const schema = yup.object().shape({
         .boolean()
         .oneOf([true], "Please accept terms and policy"),
 });
+
 
 function Register() {
     const navigate = useNavigate();
@@ -58,11 +68,33 @@ function Register() {
             const json = await res.json();
 
             if (!res.ok) {
+                localStorage.setItem("user", JSON.stringify(data));
+                localStorage.setItem("token", json.token);
                 alert(json.message || "Register failed");
                 return;
             }
 
-            alert("Đăng ký thành công");
+            const loginRes = await fetch(`${API_URL}/api/auth/login`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    email: data.email,
+                    password: data.password
+                }),
+            });
+
+            const loginJson = await loginRes.json();
+
+            if (!loginRes.ok) {
+                alert("Register success, but auto login failed. Please login manually.");
+                navigate('/login');
+                return;
+            }
+
+            localStorage.setItem("token", loginJson.token);
+            localStorage.setItem("user", JSON.stringify(loginJson.user));
+
+            alert("Register success");
             navigate('/home1');
 
         } catch (error) {
@@ -103,7 +135,7 @@ function Register() {
                                 />
                                 <img src={user_icon} alt="" className='w-6 absolute right-2' />
                             </div>
-                            {errors.name && <p className="text-red-700 italic text-sm mt-1">{errors.name.message}</p>}
+                            {errors.name && <p className="text-red-700 text-shadow-sm text-shadow-gray-200 italic text-sm mt-1">{errors.name.message}</p>}
                         </div>
 
                         <div>
@@ -117,7 +149,7 @@ function Register() {
                                 />
                                 <img src={mail_icon} alt="" className='w-6 absolute right-2' />
                             </div>
-                            {errors.email && <p className="text-red-700 italic text-sm mt-1">{errors.email.message}</p>}
+                            {errors.email && <p className="text-red-700 text-shadow-sm text-shadow-gray-200 italic text-sm mt-1">{errors.email.message}</p>}
                         </div>
 
                         <div>
@@ -131,7 +163,7 @@ function Register() {
                                 />
                                 <img src={password_icon} alt="" className='w-6 absolute right-2' />
                             </div>
-                            {errors.password && <p className="text-red-700 italic text-sm mt-1">{errors.password.message}</p>}
+                            {errors.password && <p className="text-red-700 text-shadow-sm text-shadow-gray-200 italic text-sm mt-1">{errors.password.message}</p>}
                         </div>
 
                         <div>
@@ -145,7 +177,7 @@ function Register() {
                                 />
                                 <img src={password_icon} alt="" className='w-6 absolute right-2' />
                             </div>
-                            {errors.confirmPassword && <p className="text-red-700 italic text-sm mt-1">{errors.confirmPassword.message}</p>}
+                            {errors.confirmPassword && <p className="text-red-700 text-shadow-sm text-shadow-gray-200 italic text-sm mt-1">{errors.confirmPassword.message}</p>}
                         </div>
 
                         <div className="flex items-center mt-8">
@@ -159,7 +191,7 @@ function Register() {
                                 <span className="text-blue-300 font-semibold ml-1">Terms and Conditions</span>
                             </label>
                         </div>
-                        {errors.termsAccepted && <p className="text-red-700 italic text-sm mt-1">{errors.termsAccepted.message}</p>}
+                        {errors.termsAccepted && <p className="text-red-700 text-shadow-sm text-shadow-gray-200 italic text-sm mt-1">{errors.termsAccepted.message}</p>}
 
                         <div className="mt-8">
                             <button
@@ -171,7 +203,7 @@ function Register() {
 
                             <p className="text-sm text-slate-300 mt-8">
                                 Already have an account?
-                                <Link to='/profile' className="text-blue-300 font-semibold hover:underline ml-1">
+                                <Link to='/login' className="text-blue-300 font-semibold hover:underline ml-1">
                                     Login here
                                 </Link>
                             </p>

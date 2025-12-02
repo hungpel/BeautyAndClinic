@@ -13,8 +13,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 const schema = yup.object({
-    email: yup.string().email("Invalid email").required("Email is required"),
-    password: yup.string().required("Password is required")
+    email: yup
+        .string()
+        .email("Invalid email")
+        .required("Email is required"),
+    password: yup
+        .string()
+        .required("Password is required")
+        .min(6, "Password must be at least 6 characters")
 });
 
 const API_URL = import.meta.env.VITE_API_URL;
