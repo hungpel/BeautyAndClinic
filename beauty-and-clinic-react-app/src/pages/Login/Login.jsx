@@ -49,12 +49,12 @@ function Login() {
                 alert(resData.message || "Login failed");
                 return;
             }
-
+            localStorage.setItem("user", JSON.stringify(data));
             localStorage.setItem("token", resData.token);
 
             alert("Login success!");
 
-            navigate("/profile");
+            navigate("/");
         } catch (error) {
             alert("Server error or BE not running");
         }

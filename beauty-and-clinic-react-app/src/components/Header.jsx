@@ -13,8 +13,10 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Header({bgImage, lightHeader}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [user, setUser] = useState(null);
+  const savedUser = localStorage.getItem("user");
+  const [user, setUser] = useState(savedUser ? JSON.parse(savedUser) : null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -164,11 +166,11 @@ export default function Header({bgImage, lightHeader}) {
                     >
                       Settings
                     </Link>
-                    <hr className="my-1 border-gray-200" />
-                    <button
-                      onClick={handleLogout}
-                      className="w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md transition-colors duration-200"
-                    >
+                      <hr className="my-1 border-gray-200" />
+                      <button
+                        onClick={handleLogout}
+                        className="w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md transition-colors duration-200"
+                      >
                       Log Out
                     </button>
                   </div>
