@@ -12,6 +12,10 @@
     margin: 0;
     padding: 0;
 } */
+html, body {
+    overflow-x: hidden;
+}
+
 
 body {
     font-family: 'Poppins', sans-serif;

@@ -48,7 +48,7 @@ function Profile() {
                 <Link to='/' className="mt-6 bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md transform transition duration-200 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300">
                     Home
                 </Link>
-                <Link to='/Login' className="mt-6 bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md transform transition duration-200 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                <Link to='/login' className="mt-6 bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md transform transition duration-200 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300">
                     Sign Out
                 </Link>
 

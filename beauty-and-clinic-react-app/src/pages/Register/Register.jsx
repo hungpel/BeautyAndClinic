@@ -35,7 +35,6 @@ const schema = yup.object().shape({
 function Register() {
     const navigate = useNavigate();
 
-
     const {
         register,
         handleSubmit,
@@ -172,7 +171,7 @@ function Register() {
 
                             <p className="text-sm text-slate-300 mt-8">
                                 Already have an account?
-                                <Link to='/login' className="text-blue-300 font-semibold hover:underline ml-1">
+                                <Link to='/profile' className="text-blue-300 font-semibold hover:underline ml-1">
                                     Login here
                                 </Link>
                             </p>
