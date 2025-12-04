@@ -2,6 +2,8 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useMutation } from "@tanstack/react-query";
+import { registerApi, loginApi } from "../../api/auth";
 
 import about_img from '../../assets/img/about/about-vision.png'
 import user_icon from '../../assets/icon/user.png'
@@ -27,10 +29,10 @@ const schema = yup.object().shape({
     password: yup
         .string()
         .required("Please enter your password")
-        // .matches(
-        //     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,
-        //     "Password must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number"
-        // )
+        .matches(
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,
+            "Password must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number"
+        )
         .min(6, "Password must be at least 6 characters"),
     confirmPassword: yup
         .string()
@@ -53,54 +55,37 @@ function Register() {
         resolver: yupResolver(schema),
     });
 
-    const onSubmit = async (data) => {
-        try {
-            const res = await fetch(`${API_URL}/api/auth/register`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name: data.name,
-                    email: data.email,
-                    password: data.password
-                }),
-            });
+    const registerMutation = useMutation({
+        mutationFn: registerApi,
+    });
 
-            const json = await res.json();
-
-            if (!res.ok) {
-                localStorage.setItem("user", JSON.stringify(data));
-                localStorage.setItem("token", json.token);
-                alert(json.message || "Register failed");
-                return;
-            }
-
-            const loginRes = await fetch(`${API_URL}/api/auth/login`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    email: data.email,
-                    password: data.password
-                }),
-            });
-
-            const loginJson = await loginRes.json();
-
-            if (!loginRes.ok) {
-                alert("Register success, but auto login failed. Please login manually.");
-                navigate('/login');
-                return;
-            }
-
-            localStorage.setItem("token", loginJson.token);
-            localStorage.setItem("user", JSON.stringify(loginJson.user));
-
-            alert("Register success");
-            navigate('/home1');
-
-        } catch (error) {
-            console.error("Fetch error:", error);
-            alert("Something went wrong: " + error.message);
+    const loginMutation = useMutation({
+        mutationFn: loginApi,
+        onSuccess: (data) => {
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("user", JSON.stringify(data.user));
+            navigate("/home1");
         }
+    });
+
+    const onSubmit = async (data) => {
+        const payload = {
+            name: data.name,
+            email: data.email,
+            password: data.password
+        };
+
+        registerMutation.mutate(payload, {
+            onSuccess: () => {
+                loginMutation.mutate({
+                    email: data.email,
+                    password: data.password,
+                });
+            },
+            onError: (err) => {
+                alert(err.message);
+            }
+        });
     };
 
     return (

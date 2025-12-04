@@ -34,6 +34,7 @@ export default function Header({bgImage, lightHeader}) {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setUser(null);
     setDropdownOpen(false);
     navigate("/login");
