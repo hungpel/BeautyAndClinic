@@ -25,6 +25,7 @@ const schema = yup.object().shape({
         .string()
         .trim()
         .email("Wrong email")
+        .matches(/\.[A-Za-z]{2,}$/, 'Wrong email')
         .required("Please enter your email"),
     password: yup
         .string()
@@ -87,6 +88,7 @@ function Register() {
             }
         });
     };
+    const isLoading = registerMutation.isPending || loginMutation.isPending;
 
     return (
         <div className="bg-white md:h-screen">
@@ -181,9 +183,10 @@ function Register() {
                         <div className="mt-8">
                             <button
                                 type="submit"
+                                disabled={isLoading}
                                 className="w-max shadow-xl py-3 px-6 min-w-32 text-sm text-white font-medium rounded-sm bg-blue-400 hover:bg-blue-500"
                             >
-                                Register
+                                {isLoading ? 'Processing...' : 'Register'}
                             </button>
 
                             <p className="text-sm text-slate-300 mt-8">

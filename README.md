@@ -65,6 +65,11 @@ npm run dev
 ```
 
 # 🔐 Environment Variables
+Frontend .env
+```
+VITE_API_URL=
+```
+
 Backend .env
 ```
 DB_HOST=
