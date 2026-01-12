@@ -28,6 +28,7 @@ Beautice Clinic là một website tư vấn làm đẹp và chăm sóc da, kết
 - TailwindCSS / SCSS
 - React Router
 - React Hook Form + Yup
+- React Query
 - Axios
 ### Backend:
 - Node.js / Express
